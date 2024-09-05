@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --primary-color:hsl(242, 50%, 38%);
+    --base-color:#FFFFFF;
+    --title-color:hsl(320, 69%, 42%);
+    --tt-base:"Mulish", sans-serif;
+}
+
+h1, h2, h3{
+    color: var(--title-color);
+    font-weight:bold;
+}
+
+
+h1{
+    font-size: 5.8rem;
+}
+
+h2{
+    font-size: 3.5rem;
+}
+
+h3{
+    font-size: 4.2rem;
+}
+
+
+p{
+    color:var(--primary-color);
+    font-weight: normal;
+    font-size: 1.9rem;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--base-color);
+    font-family: var(--tt-base);
+}
+
+header, main, footer {
+    width: 100%;
+    max-width: 144rem; /* Limita a largura máxima */
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding: 2rem;
+}
+
+header button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 5rem;
+    height: 10rem;
+    border: solid .4rem var(--title-color);
+    background:none;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Transição suave ao mover o botão */
+}
+
+header button:hover {
+    transform: translateY(10px); /* Move o botão 10px para baixo ao passar o mouse */
+}
+
+button #down{
+    width: 3rem;
+    height: 5rem;
+}
+
+
+.nav{
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+}
+
+#title{
+    padding:10rem 0;
+}
+
+header .astronaut {
+    width: 72rem;
+    height: 74rem;
+    transition: transform 0.5s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse */
+header .astronaut:hover {
+    transform: scale(1.1) rotate(5deg); /* Aumenta 10% no tamanho e rotaciona levemente */
+}
+
+main{
+    flex-grow: 1; /* Faz o main expandir para ocupar o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    align-content: center;
+    width: 144rem;
+    height: 57.6rem;
+    background-color: var(--primary-color);
+    gap: 8rem;
+}
+
+
+.cards article{
+    text-align: left;
+    width: 36.6rem;
+    height: 44.8rem;
+    background-color: var(--base-color);
+    border-radius: 24px;
+    justify-content: space-around;
+    display:grid;
+    
+}
+
+article img{
+    width: 10rem;
+    height: 10rem;
+    margin: auto 0;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--base-color);
+    
+    
+}
+
+.contact img{
+    width: 65rem;
+    height: 65rem;
+}
+
+.contact button {
+    background-color: var(--primary-color);
+    width: 16rem;
+    height: 4.5rem;
+    border: none;
+    border-radius: 1.6rem;
+    color: var(--base-color);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.contact button:hover{
+    background-color: var(--title-color);
+}
+
+#info{
+    align-content: space-around;
+    display: grid;
+    width: 60rem;
+    height: 43rem;
+    padding: 0 5rem;
+}
+
+
+
+#name, #email, #message{
+    font-size: 1.6rem;
+    font-family: var(--tt-base);
+    background: none;
+    border-radius: 1.6rem;
+    border: solid .1rem var(--primary-color);
+    padding:2rem;
+}
+
+
+#name{
+    width: 60rem;
+    height: 4.8rem;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 40px; /* Ajusta o espaçamento para o texto do placeholder */
+    background-image: url('assets/person.png'); /* Caminho para sua imagem */
+}
+
+
+#name::placeholder{
+  color: var(--primary-color);
+}
+
+#email{
+    width: 60rem;
+    height: 4.8rem;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 40px; /* Ajusta o espaçamento para o texto do placeholder */
+    background-image: url('assets/@.png'); /* Caminho para sua imagem */
+}
+
+#email::placeholder{
+   color: var(--primary-color);
+}
+
+#message{
+    width: 60rem;
+    height: 13rem;
+}
+
+#message::placeholder{
+    color: var(--primary-color);
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7.8rem;
+    background-color: var(--primary-color);
+    font-size: 2.0rem;
+}
+
+footer a{
+    font-family: var(--tt-base);
+    color: var(--base-color);
+    text-decoration: none;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        padding: 0 1rem;
+    }
+
+    header {
+        flex-direction: column-reverse;
+        
+    }
+
+    header button {
+        width: 4rem;
+        height: 8rem;
+        display: flex;
+        align-items: center;
+    }
+    #title h1 {
+        font-size: 4rem; /* Ajustar tamanho do título */
+    }
+
+    #title p {
+        font-size: 1.6rem;
+    }
+
+    .astronaut {
+        max-width: 37rem; /* Ajustar o tamanho da imagem */
+        height: 37rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        max-width: 43rem;
+        height: 125rem;
+    }
+
+    .cards article {
+        width: 35rem;
+        height: 34rem;
+    }
+
+    #info {
+        width: 35rem;
+    }
+    #name, #email, #message {
+        width: 100%; /* Ajustar inputs para telas menores */
+    }
+    .contact {
+        max-width: 43;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact img {
+       display: none;
+    }
+
+    footer {
+        font-size: 1.4rem;
+        padding: 1rem;
+        max-width: 43rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .title h1 {
+        font-size: 3.2rem; /* Reduz ainda mais o tamanho do título para telas pequenas */
+    }
+
+    .title p {
+        font-size: 1.4rem;
+    }
+
+    header button {
+        width: 4rem;
+        height: 8rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .cards article {
+        width: 35rem;
+        height: 34rem;
+    }
+
+    #name, #email, #message {
+        width: 100%; /* Ajustar inputs para telas menores */
+    }
+
+    .contact button {
+        width: 15rem;
+    }
+}
