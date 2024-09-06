@@ -1,5 +1,8 @@
 # 🚀 Explore Sem Limites
 
+![Captura de ecrã 2024-09-06 104748](https://github.com/user-attachments/assets/5fd6890f-d0e5-40c5-b353-3bba3d5d2b5a)
+
+
 Este projeto é uma revisão prática dos conteúdos ensinados no curso **Explorer** da **Rocketseat**. O objetivo é consolidar os conceitos aprendidos de HTML5, CSS3 e responsividade, criando uma página interativa e responsiva com animações simples.
 
 ## 📄 Descrição
